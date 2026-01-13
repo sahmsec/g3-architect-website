@@ -31,6 +31,21 @@
     color: #727272;
 }
 
+.orange{
+    color: #FF900E;
+}
+
+h3{
+    font-size: 2.81rem;
+}
+.medium-weight{
+    font-weight: 500;
+}
+
+.bold-weight{
+    font-weight: 700;
+}
+
 .bg-light{
     background-color: rgba(255, 144, 14, 0.1);
 }
@@ -45,8 +60,8 @@
     font-weight: 600;
     cursor: pointer;
 }
-/*header  styles*/
 
+/*header  styles*/
 .navbar{
     align-items: center;
     justify-content: space-between;
@@ -74,10 +89,13 @@
     font-size: 2.8rem;
 
 }
+
+
 /* banner styles */
 .banner-content{
     max-width: 862px;
     margin: 0 auto;
+    text-align: center;
 }
 .banner-title{
     font-weight: bold;
@@ -88,10 +106,91 @@
 }
 
 
+/* main section design */
+main{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+main > section{
+    margin-top: 160px;
+}
+
+.teams{
+    align-items: center;
+    gap: 70px;
+}
+
+.team-img-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.our-features{
+    max-width: 530px;
+    /* border: 1px solid red; */
+
+}
+
+.facts-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.fact{
+    border: 1px solid rgba(255, 144, 14, 1);
+    width: 240px;
+    height: 240px;
+    border-radius: 8px;
+    text-align: center; 
+    padding: 40px;
+
+}
+
+.sponsor-info{
+    max-width: 542px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.sponsor-companies{
+    
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.sponsor-companies img{
+    filter: grayscale(100%);
+    max-height: 50px;
+}
+
+
 /* responsive media query */
 
 @media screen and (max-width: 576px){
-    .navbar, .nav-links{
+    html{
+        font-size: 14px;
+    }
+    .navbar, .teams{
         flex-direction: column;
+    }
+
+
+    .team-img-container, 
+    .facts-container,
+    .sponsor-companies
+    {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .facts-container,
+    .sponsor-companies
+    {
+        justify-items: center;
+        gap: 24px;
+    }
+
+    .our-features{
+        text-align: center;
     }
 }
